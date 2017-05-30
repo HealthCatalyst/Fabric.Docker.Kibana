@@ -14,6 +14,6 @@ ADD ./kibanasecure.yml ${KIBANA_HOME}/config/kibanasecure.yml
 ADD ./ca.crt /usr/local/share/ca-certificates
 
 USER root
-RUN /usr/sbin/update-ca-certificates
+RUN /usr/bin/update-ca-trust
 
 USER kibana
