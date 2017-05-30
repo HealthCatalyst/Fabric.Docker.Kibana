@@ -11,9 +11,9 @@ ADD ./kibanasecure.yml ${KIBANA_HOME}/config/kibanasecure.yml
 ### install plugins
 # RUN gosu kibana ${KIBANA_HOME}/bin/kibana-plugin install x-pack
 
-ADD ./ca.crt /usr/local/share/ca-certificates
+ADD ./ca.crt /etc/pki/ca-trust/source/anchors
 
 USER root
-RUN /usr/bin/update-ca-trust
+RUN /usr/bin/update-ca-trust extract
 
 USER kibana
