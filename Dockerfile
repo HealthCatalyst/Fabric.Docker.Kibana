@@ -1,4 +1,4 @@
-FROM docker.elastic.co/kibana/kibana:5.4.0
+FROM docker.elastic.co/kibana/kibana:6.4.2
 
 ENV KIBANA_HOME /usr/share/kibana
 
